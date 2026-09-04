@@ -239,12 +239,18 @@ footer .wrap{display:flex; flex-wrap:wrap; gap:12px; justify-content:space-betwe
       </div>
     </article>
 
-    <div class="grid2">
-      <article class="card">
-        <div class="tagline"><span class="chip acc">Multi-agent orchestration</span><span class="chip">Claude + Gemini</span></div>
-        <h4>CLIPPER &mdash; Automated Video Clipping Factory</h4>
-        <p>A &ldquo;media in, structure out&rdquo; pipeline turning long-form video into short, vertical, publish-ready clips through a chain of specialised agents.</p>
-        <div class="pipeline" style="margin:14px 0">
+    <article class="feature" style="margin-top:22px">
+      <div class="feature-body">
+        <div class="tagline">
+          <span class="chip live">Live</span>
+          <span class="chip acc">Multi-agent orchestration</span>
+          <span class="chip">Claude + Gemini</span>
+          <span class="chip">9-stage pipeline</span>
+        </div>
+        <h3>CLIPPER &mdash; Automated Video Clipping Factory</h3>
+        <p>Long-form video in, short vertical publish-ready clips out. Nine specialised agents run the chain, and every clip comes out scored on how likely it is to hold a viewer &mdash; with the reasoning shown.</p>
+
+        <div class="pipeline">
           <span class="stage">VideoIngest</span><span class="arrow">&rarr;</span>
           <span class="stage">whisper</span><span class="arrow">&rarr;</span>
           <span class="stage">Scout</span><span class="arrow">&rarr;</span>
@@ -255,13 +261,39 @@ footer .wrap{display:flex; flex-wrap:wrap; gap:12px; justify-content:space-betwe
           <span class="stage">Publicist</span><span class="arrow">&rarr;</span>
           <span class="stage">ffmpeg</span>
         </div>
+
+        <div class="media">
+          <figure>
+            <img src="clipper-results.jpg" alt="A completed CLIPPER run: the nine-stage pipeline bar above seven finished vertical clips, each with a scrubber score, a predicted-retention curve and burned-in captions" loading="lazy">
+            <figcaption>One run &mdash; 109 minutes in, seven scored clips out, 12 credits spent</figcaption>
+          </figure>
+          <div class="media-2">
+            <figure>
+              <img src="clipper-score.jpg" alt="A single clip scored 71: Hook 27/30, Pace 22/25, Payoff 22/25, Loop 0/20, each with the reason behind the number, above a predicted-retention curve" loading="lazy">
+              <figcaption>Every score shows its reasoning &mdash; and says plainly what it has not measured yet</figcaption>
+            </figure>
+            <figure>
+              <img src="clipper-analytics.jpg" alt="The analytics tab: paste a platform's real stats for a clip, parsed into clip_analytics_json, feeding a twenty-clip calibration set that refits the scoring weights" loading="lazy">
+              <figcaption>Paste the real numbers back in; the scoring model refits against them</figcaption>
+            </figure>
+          </div>
+        </div>
+
         <ul class="did">
-          <li>Every clip scored on a predicted-retention &ldquo;scrubber&rdquo; metric with a retention curve; weak hooks flagged and re-hooks suggested.</li>
-          <li>Credit spend metered per run &mdash; token and cost budgeting built into the orchestration, not bolted on.</li>
-          <li>Clip proposals route through a one-approve review queue before publish.</li>
+          <li><strong>A retention score that explains itself.</strong> Hook, Pace, Payoff and Loop are scored separately with the evidence attached &mdash; &ldquo;payoff tease lands inside 2&nbsp;s&rdquo;, &ldquo;3.7&nbsp;w/s &middot; 4 gaps (4.6&nbsp;s dead air pre-strip)&rdquo; &mdash; not a single opaque number.</li>
+          <li><strong>It closes the loop with reality.</strong> Paste a platform's real stats for a published clip and they are parsed into a calibration set; once twenty clips land, the scoring weights refit against measured performance instead of staying a guess.</li>
+          <li><strong>It admits what it does not know.</strong> Loop scores 0/20 and is labelled &ldquo;not yet measured&rdquo;; the retention curve is labelled &ldquo;model, not a measurement&rdquo;; the dashboard states every figure is a query over existing tables, zero fabrication.</li>
+          <li><strong>Nothing is destroyed.</strong> Every re-caption or restore creates a new take rather than overwriting &mdash; a decision recorded as an ADR and surfaced in the UI.</li>
+          <li><strong>Reframe, caption and aspect are choices, not re-runs</strong> &mdash; subject-track / two-shot / center-crop, four caption presets, 9:16 / 1:1 / 16:9, each producing a fresh take.</li>
+          <li><strong>Cost attributed per stage</strong>, with a one-approve review queue between proposal and publish.</li>
         </ul>
-        <p class="tech">Claude Messages API · tool use · model routing · persona engineering · Vue 3 operator console</p>
-      </article>
+        <p class="mono" style="margin-bottom:16px">Claude Messages API &middot; tool use &middot; model routing &middot; whisper &middot; libass &middot; ffmpeg &middot; Vue 3 operator console</p>
+        <div class="links"><a class="btn primary" href="https://clipper.studiokecil.com/clip/youtube-clipper?p=401" target="_blank" rel="noopener">See a completed run</a></div>
+      </div>
+    </article>
+
+    <div class="grid2">
+
 
       <article class="card">
         <div class="tagline"><span class="chip acc">RAG</span><span class="chip">LangGraph4j</span></div>
