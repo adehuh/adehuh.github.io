@@ -340,6 +340,47 @@ footer .wrap{display:flex; flex-wrap:wrap; gap:12px; justify-content:space-betwe
     </article>
 
 
+    <article class="feature" style="margin-bottom:22px">
+      <div class="feature-body">
+        <div class="tagline">
+          <span class="chip live">Live on web, iOS &amp; Android</span>
+          <span class="chip">B2B commerce</span>
+          <span class="chip">Payments</span>
+          <span class="chip">Multi-tenant</span>
+        </div>
+        <h3>lexica.id &mdash; B2B Interior-Materials Marketplace</h3>
+        <p>A trade marketplace for interior materials &mdash; BLUM, Decometal, FENIX, EGGER, Homapal and more &mdash; serving designers, contractors and fit-out businesses across Indonesia, on the web and as native iOS and Android apps.</p>
+
+        <figure style="margin:22px 0 6px">
+          <img src="lexica-web.jpg" alt="The Lexica storefront: brand navigation across product systems, and a catalogue grid with prices, ratings and stock badges" loading="lazy" style="width:100%;display:block;border-radius:10px;border:1px solid var(--line)">
+          <figcaption class="shots-note" style="margin-top:8px">The storefront &mdash; catalogue, per-brand navigation, trade pricing</figcaption>
+        </figure>
+
+        <div class="shots" id="lexica-shots">
+          <img loading="lazy" src="https://play-lh.googleusercontent.com/nzrrkQ0K_UZJLGfUNn1xzMIf4dzgtvksHt-uScQvEU5WAUgZptu4gnpevsXBb3-s-aJoSz9Y2wrL1FjVlg1EWw=w392" alt="Lexica app home: thousands of interior materials from trusted brands">
+          <img loading="lazy" src="https://play-lh.googleusercontent.com/ZxkJHY1vsoTAUGMUag6CTvVNDv7IfYWyJ0dMGzVuZuZbCBLZm-f49Qvp1TTjQRiBDn76YKPIOneq7xVqdvfm=w392" alt="Lexica app: full catalogue browsed by brand">
+          <img loading="lazy" src="https://play-lh.googleusercontent.com/5UKYUwCZQPRLESfFWScQfirc1gLOoqCfcoNFXCxk8I3NdxpHVcwsWM_pxc4LeGe0LoCp4Qr2npAhY2HmK7g=w392" alt="Lexica app: fast search by product name or SKU">
+          <img loading="lazy" src="https://play-lh.googleusercontent.com/GfGoYyeZSeIntsj7HElWDIF3tw_cD4jILM1t1z7cKSzIPubtumb8YBRvguhXo_yFmiQSftatGUXWjcYpj-FEN0s=w392" alt="Lexica app: full technical specification on a product">
+          <img loading="lazy" src="https://play-lh.googleusercontent.com/KkYyS0yq5qyVjehr9Fd6BPNNjyxI2B2CbGDeD4HHhv55c3Ardlnx9VqcK4YaE3HHJ3lZ_JH5AJZNsdf-jdnzGVI=w392" alt="Lexica app: hi-res product photography ready to download">
+          <img loading="lazy" src="https://play-lh.googleusercontent.com/8j-S_HREO_CJVBde9jW7t0h3-YzQD9KpvCx8al5w73uQ2Aq56IwbUUnTszAtN-0r-VxGK9k0WzyuKPjTt0RGNow=w392" alt="Lexica app: Apple and Google sign-in">
+        </div>
+        <p class="shots-note">Screens from the published Google Play listing</p>
+
+        <ul class="did">
+          <li>A monorepo split into a natively-compiled core and a heavier background worker (PDF/XLSX generation, push, e-mail, signed uploads), integrated through a database job table, behind a component-driven storefront.</li>
+          <li>Catalog, inventory, store onboarding and KYC, orders and fulfilment, payments and in-app wallet, vouchers, customer-tier pricing and flash sales.</li>
+          <li>Self-contained RS256 JWT auth with route- and resource-level RBAC.</li>
+          <li>Hi-res technical assets downloadable per product, and SKU-level search across the full brand catalogue.</li>
+          <li>Shipped through CI with quality gates and dependency scanning on every build.</li>
+        </ul>
+        <div class="links">
+          <a class="btn primary" href="https://lexica.id/" target="_blank" rel="noopener">lexica.id</a>
+          <a class="btn" href="https://play.google.com/store/apps/details?id=app.lexica.mobile" target="_blank" rel="noopener">Google Play</a>
+          <a class="btn" href="https://apps.apple.com/id/app/lexica/id6792983377" target="_blank" rel="noopener">App Store</a>
+        </div>
+      </div>
+    </article>
+
     <div class="grid2">
 
 
@@ -365,16 +406,6 @@ footer .wrap{display:flex; flex-wrap:wrap; gap:12px; justify-content:space-betwe
         </ul>
       </article>
 
-      <article class="card">
-        <div class="tagline"><span class="chip">B2B commerce</span><span class="chip">Payments</span></div>
-        <h4>lexica.id &mdash; B2B Interior-Materials Marketplace</h4>
-        <p>A monorepo split into a natively-compiled core and a heavier background worker (PDF/XLSX generation, push, e-mail, signed uploads), integrated through a database job table, behind a component-driven storefront.</p>
-        <ul class="did">
-          <li>Catalog, inventory, store onboarding and KYC, orders and fulfilment, payments and in-app wallet, vouchers, customer-tier pricing and flash sales.</li>
-          <li>Self-contained RS256 JWT auth with route- and resource-level RBAC.</li>
-          <li>Shipped through CI with quality gates and dependency scanning on every build.</li>
-        </ul>
-      </article>
 
       <article class="card">
         <div class="tagline"><span class="chip">Enterprise ERP</span><span class="chip">Multi-tenant</span></div>
@@ -557,17 +588,19 @@ footer .wrap{display:flex; flex-wrap:wrap; gap:12px; justify-content:space-betwe
 
 <script>
 (function(){
-  var strip = document.getElementById('klikjob-shots');
-  if(!strip) return;
-  var imgs = strip.querySelectorAll('img'), broken = 0;
-  imgs.forEach(function(im){
-    im.addEventListener('error', function(){
-      im.remove();
-      if(++broken === imgs.length){
-        strip.remove();
-        var note = document.querySelector('.shots-note');
-        if(note) note.remove();
-      }
+  ['klikjob-shots','lexica-shots'].forEach(function(id){
+    var strip = document.getElementById(id);
+    if(!strip) return;
+    var imgs = strip.querySelectorAll('img'), broken = 0;
+    imgs.forEach(function(im){
+      im.addEventListener('error', function(){
+        im.remove();
+        if(++broken === imgs.length){
+          var note = strip.nextElementSibling;
+          if(note && note.classList.contains('shots-note')) note.remove();
+          strip.remove();
+        }
+      });
     });
   });
 })();
