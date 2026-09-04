@@ -103,6 +103,11 @@ section{padding:58px 0; scroll-margin-top:70px}
 .did li::before{content:"\2192"; position:absolute; left:0; color:var(--accent); font-family:var(--mono)}
 .links{display:flex; flex-wrap:wrap; gap:10px}
 
+.media{display:grid; gap:12px; margin:22px 0 6px}
+.media figure{margin:0}
+.media img{width:100%; display:block; border-radius:10px; border:1px solid var(--line); background:var(--surface-2)}
+.media figcaption{font-family:var(--mono); font-size:.68rem; letter-spacing:.06em; text-transform:uppercase; color:var(--ink-3); margin-top:8px}
+.media-2{display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:12px}
 .shots{display:flex; gap:12px; overflow-x:auto; padding:4px 0 12px; margin:20px 0 4px; scroll-snap-type:x mandatory}
 .shots img{width:196px; flex:0 0 auto; border-radius:10px; border:1px solid var(--line); background:var(--surface-2); scroll-snap-align:start; display:block}
 .shots-note{font-family:var(--mono); font-size:.68rem; letter-spacing:.07em; text-transform:uppercase; color:var(--ink-3); margin:0 0 18px}
@@ -192,15 +197,49 @@ footer .wrap{display:flex; flex-wrap:wrap; gap:12px; justify-content:space-betwe
     <article class="feature">
       <div class="feature-body">
         <div class="tagline">
-          <span class="chip acc">Multi-agent orchestration</span>
-          <span class="chip">Anthropic Claude</span>
-          <span class="chip">Google Gemini</span>
-          <span class="chip">Vue 3 console</span>
+          <span class="chip acc">Agent crew</span>
+          <span class="chip">Quarkus · Java 21</span>
+          <span class="chip">Claude + Gemini</span>
+          <span class="chip">fal.ai</span>
         </div>
-        <h3>CLIPPER &mdash; Automated Video Clipping Factory</h3>
-        <p>A &ldquo;media in, structure out&rdquo; pipeline that turns long-form video into short, vertical, publish-ready clips through a chain of specialised agents.</p>
+        <h3>invideo &mdash; AI Video Creation Platform</h3>
+        <p>An idea, a script or a link goes in; a finished, publish-ready video comes out. A crew of Claude-powered agents &mdash; Director, Scriptwriter, Cinematographer, Casting, Character Designer, Colorist, Sound, Music, Brand Safety and QC &mdash; is assembled per project and runs the production end to end.</p>
 
-        <div class="pipeline">
+        <div class="media">
+          <figure>
+            <img src="invideo-office.gif" alt="The invideo office floor: 22 named agents at desks across Writers' Room, Art Dept, Sound Stage, Edit Bay and Lobby, each showing live status as a past run replays" loading="lazy">
+            <figcaption>The office floor &mdash; every agent on the crew, live, as a run replays</figcaption>
+          </figure>
+          <div class="media-2">
+            <figure>
+              <img src="invideo-crew.jpg" alt="Production crew panel: ten numbered pipeline stages with per-stage credit costs and model plan, beside the rendered 9:16 output video" loading="lazy">
+              <figcaption>Ten stages, priced before you run &mdash; and the cut that comes out</figcaption>
+            </figure>
+            <figure>
+              <img src="invideo-storyboard.jpg" alt="Storyboard view: six generated shots with per-shot continuity health dots, QC filters and the keyframe prompt for the selected shot" loading="lazy">
+              <figcaption>Storyboard with per-shot continuity health and the prompt behind each frame</figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <ul class="did">
+          <li><strong>Ten-stage pipeline you can see and stop.</strong> Script, Safety, Casting, Storyboard, Visuals, Animate, Voiceover, Music, Sound, Edit &amp; render &mdash; each stage re-runnable on its own, each able to pause for review before it spends anything.</li>
+          <li><strong>The bill before the run.</strong> Every stage carries a credit cost, and the panel shows estimated spend, typical range, current balance and balance after the run.</li>
+          <li><strong>Character consistency that is auditable.</strong> Recurring subjects are locked once and reused verbatim, with a seed lock, a consistency score across shots, and branch signatures showing exactly which routings each description was sent to.</li>
+          <li><strong>Nothing regenerates silently.</strong> Editing a character sheet changes future generations only; the storyboard tracks per-shot revision drift, stale frames and image/motion QC.</li>
+          <li><strong>Model routing across providers</strong> &mdash; Claude for the reasoning stages, Gemini via the Agent Development Kit, fal.ai for image, video and speech &mdash; swappable per run.</li>
+          <li>Verified by QuarkusTest and Testcontainers suites plus architecture-boundary and contract tests that fail the build, on every pipeline.</li>
+        </ul>
+        <p class="mono" style="margin-bottom:16px">Quarkus (Java 21, GraalVM-native ready) &middot; Vue 3 &middot; Vite &middot; TypeScript &middot; PostgreSQL + Flyway &middot; Google Cloud Storage &middot; ffmpeg</p>
+      </div>
+    </article>
+
+    <div class="grid2">
+      <article class="card">
+        <div class="tagline"><span class="chip acc">Multi-agent orchestration</span><span class="chip">Claude + Gemini</span></div>
+        <h4>CLIPPER &mdash; Automated Video Clipping Factory</h4>
+        <p>A &ldquo;media in, structure out&rdquo; pipeline turning long-form video into short, vertical, publish-ready clips through a chain of specialised agents.</p>
+        <div class="pipeline" style="margin:14px 0">
           <span class="stage">VideoIngest</span><span class="arrow">&rarr;</span>
           <span class="stage">whisper</span><span class="arrow">&rarr;</span>
           <span class="stage">Scout</span><span class="arrow">&rarr;</span>
@@ -211,28 +250,12 @@ footer .wrap{display:flex; flex-wrap:wrap; gap:12px; justify-content:space-betwe
           <span class="stage">Publicist</span><span class="arrow">&rarr;</span>
           <span class="stage">ffmpeg</span>
         </div>
-
         <ul class="did">
-          <li>Every clip is scored on a predicted-retention &ldquo;scrubber&rdquo; metric with a retention curve; weak hooks are flagged and re-hooks suggested.</li>
-          <li>Credit spend is metered per run &mdash; token and cost budgeting built into the orchestration, not bolted on.</li>
-          <li>Clip proposals route through a one-approve review queue before anything publishes.</li>
-          <li>Subject-tracking vertical reframe and burned-in captions handled in the pipeline, so output is publish-ready.</li>
+          <li>Every clip scored on a predicted-retention &ldquo;scrubber&rdquo; metric with a retention curve; weak hooks flagged and re-hooks suggested.</li>
+          <li>Credit spend metered per run &mdash; token and cost budgeting built into the orchestration, not bolted on.</li>
+          <li>Clip proposals route through a one-approve review queue before publish.</li>
         </ul>
-        <p class="mono">Claude Messages API &middot; tool use &middot; model routing &middot; persona engineering &middot; Vue 3 operator console</p>
-      </div>
-    </article>
-
-    <div class="grid2">
-      <article class="card">
-        <div class="tagline"><span class="chip acc">Agent crew</span><span class="chip">Quarkus</span></div>
-        <h4>invideo-app &mdash; AI Video Creation Platform</h4>
-        <p>A crew of Claude-powered agents &mdash; Director, Scriptwriter, Cinematographer, Casting, Character Designer, Colorist, Sound, Music, Brand Safety and QC &mdash; assembled per project, turning an idea, script or link into a finished video.</p>
-        <ul class="did">
-          <li>Character consistency through reference plates and face locking.</li>
-          <li>Collaborative virtual office with artifact lineage, plus a news studio publishing to connected social channels.</li>
-          <li>QuarkusTest and Testcontainers suites plus architecture-boundary and contract tests that fail the build, on every pipeline.</li>
-        </ul>
-        <p class="tech">Quarkus (Java 21, GraalVM-native ready) · Vue 3 · Vite · TypeScript · PostgreSQL + Flyway · Google Cloud Storage · ffmpeg</p>
+        <p class="tech">Claude Messages API · tool use · model routing · persona engineering · Vue 3 operator console</p>
       </article>
 
       <article class="card">
@@ -247,8 +270,7 @@ footer .wrap{display:flex; flex-wrap:wrap; gap:12px; justify-content:space-betwe
         <p class="tech">Quarkus · LangChain4j · LangGraph4j · Google Gemini + Agent Development Kit · Qdrant · PostgreSQL CDC</p>
       </article>
     </div>
-  </div>
-</section>
+  </section>
 
 <section id="platform">
   <div class="wrap">
