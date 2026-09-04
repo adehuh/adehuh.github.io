@@ -103,6 +103,9 @@ section{padding:58px 0; scroll-margin-top:70px}
 .did li::before{content:"\2192"; position:absolute; left:0; color:var(--accent); font-family:var(--mono)}
 .links{display:flex; flex-wrap:wrap; gap:10px}
 
+.shots{display:flex; gap:12px; overflow-x:auto; padding:4px 0 12px; margin:20px 0 4px; scroll-snap-type:x mandatory}
+.shots img{width:196px; flex:0 0 auto; border-radius:10px; border:1px solid var(--line); background:var(--surface-2); scroll-snap-align:start; display:block}
+.shots-note{font-family:var(--mono); font-size:.68rem; letter-spacing:.07em; text-transform:uppercase; color:var(--ink-3); margin:0 0 18px}
 .grid2{display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); gap:18px; margin-top:18px; align-items:stretch}
 .card{background:var(--surface); border:1px solid var(--line); border-radius:12px; padding:26px; display:flex; flex-direction:column; gap:10px; box-shadow:var(--shadow)}
 .card h4{font-family:var(--display); font-weight:700; font-size:1.18rem; letter-spacing:-.02em; margin:0}
@@ -252,19 +255,34 @@ footer .wrap{display:flex; flex-wrap:wrap; gap:12px; justify-content:space-betwe
     <div class="sec-head"><h2>Platform &amp; product work</h2><span class="rule"></span><span class="mono">04 &mdash; 09</span></div>
     <p class="sec-intro">Six production products across marketplace, commerce, ERP, messaging and media delivery &mdash; each owning its own auth, payments, migrations and data integrity.</p>
 
-    <div class="grid2">
-      <article class="card">
-        <div class="tagline"><span class="chip live">Live on Google Play</span><span class="chip">Flutter</span><span class="chip">Spring Boot</span></div>
-        <h4>klikjob.com &mdash; Job Marketplace</h4>
-        <p>An Indonesian freelancer marketplace: a reactive Spring Boot / JHipster 8 microservices estate on GKE, with an OAuth2 API gateway and Consul discovery fronting ~15 services (user, registration, CMS, CRM, chat, workflow, financial, payment, e-mail, reporting). The platform's longest-running codebase, in continuous development since 2022.</p>
+    <article class="feature" style="margin-bottom:22px">
+      <div class="feature-body">
+        <div class="tagline"><span class="chip live">Live on Google Play</span><span class="chip">Flutter</span><span class="chip">Spring Boot</span><span class="chip">~15 services</span></div>
+        <h3>klikjob.com &mdash; Job Marketplace</h3>
+        <p>An Indonesian freelancer marketplace: a reactive Spring Boot / JHipster&nbsp;8 microservices estate on GKE, with an OAuth2 API gateway and Consul discovery fronting ~15 services &mdash; user, registration, CMS, CRM, chat, workflow, financial, payment, e-mail and reporting. The platform's longest-running codebase, in continuous development since 2022.</p>
+
+        <div class="shots" id="klikjob-shots">
+          <img loading="lazy" src="https://play-lh.googleusercontent.com/0ip9O3KLhMytLJ4Ik7nQIDKYFcISWAPqCHWVn1w8CerWVJtaKsy-4rLkpVug5OvKj9JXc5CcTrzMQ8nKrKW2iRQ=w392" alt="KlikJob: 90+ work categories">
+          <img loading="lazy" src="https://play-lh.googleusercontent.com/B_SPf0XknT0A2NwhlI3SqBYK9-v4_aWV6XGZf0eQPKTPjRPnviKYUKFih7CU5yt6ESsIh1CJkkgiN9g2vdk4DA=w392" alt="KlikJob: browsing and filtering freelancers">
+          <img loading="lazy" src="https://play-lh.googleusercontent.com/H8pr0qcAlIrOvUbtQqx4iQ2otfn518p9YRlcdzelqkIMcx0QOSP8HS5oDn69suz0oAXePTZwatot4GjuJC8i=w392" alt="KlikJob: in-app chat between client and freelancer">
+          <img loading="lazy" src="https://play-lh.googleusercontent.com/otpVwU8lfMS6kCHZ6iDpkzz2fAyZTxb2Po_lH1W34PfJzFlC8aZEANqwYzy3-W4XtAMk3VzOU8JwO8AKy1NL1w=w392" alt="KlikJob: project detail with freelancer bids">
+          <img loading="lazy" src="https://play-lh.googleusercontent.com/E8kg9_uTLUA3CDFwWPjmFs-s2mVkdRDAi4VwNnIBnKqU-5RXF5WJMTubM5nXo888lJ2qiEWQ9OGQGHptI8STRvw=w392" alt="KlikJob: order detail with escrow release timer">
+          <img loading="lazy" src="https://play-lh.googleusercontent.com/5LFiOc8YyGANFL8AtEQ5V4tItKB-IkWyC-sBgssN6EFhsA3rkMlT3kStoSTPUsPdjyY_BcsXVXfkdSX4Q-Tk=w392" alt="KlikJob: live freelancer location tracking">
+        </div>
+        <p class="shots-note">Screens from the published Google Play listing</p>
         <ul class="did">
           <li>Flutter Android/iOS client on GetX over a clean data/domain/feature architecture: STOMP WebSocket chat, ObjectBox offline cache with background sync, Dio token-refresh interceptors.</li>
-          <li>KTP OCR for KYC, wallet top-up and withdrawal, auctions and milestone tracking, verified deep links and forced update.</li>
+          <li>KTP OCR for KYC, wallet top-up and withdrawal, auctions and milestone tracking, Google Maps background location, verified deep links and forced update.</li>
           <li>Verified by a Patrol end-to-end suite with GitLab CI static analysis and SonarQube.</li>
         </ul>
-        <p class="tech">Spring Boot WebFlux · JHipster 8 · Keycloak · Hazelcast · Apache Pulsar · PostgreSQL · GraalVM native · Flutter · Cypress</p>
-        <div class="links"><a class="btn sm" href="https://play.google.com/store/apps/details?id=com.klikjob.a" target="_blank" rel="noopener">Google Play</a><a class="btn sm" href="https://klikjob.com" target="_blank" rel="noopener">klikjob.com</a></div>
-      </article>
+        <p class="mono" style="margin-bottom:16px">Spring Boot WebFlux &middot; JHipster 8 &middot; Keycloak &middot; Hazelcast &middot; Apache Pulsar &middot; PostgreSQL &middot; GraalVM native &middot; Flutter &middot; Cypress</p>
+        <div class="links"><a class="btn primary" href="https://play.google.com/store/apps/details?id=com.klikjob.a" target="_blank" rel="noopener">View on Google Play</a></div>
+      </div>
+    </article>
+
+
+    <div class="grid2">
+
 
       <article class="card">
         <div class="tagline"><span class="chip">End-to-end encryption</span><span class="chip">Kotlin</span></div>
@@ -493,5 +511,22 @@ footer .wrap{display:flex; flex-wrap:wrap; gap:12px; justify-content:space-betwe
   </div>
 </footer>
 
+<script>
+(function(){
+  var strip = document.getElementById('klikjob-shots');
+  if(!strip) return;
+  var imgs = strip.querySelectorAll('img'), broken = 0;
+  imgs.forEach(function(im){
+    im.addEventListener('error', function(){
+      im.remove();
+      if(++broken === imgs.length){
+        strip.remove();
+        var note = document.querySelector('.shots-note');
+        if(note) note.remove();
+      }
+    });
+  });
+})();
+</script>
 </body>
 </html>
