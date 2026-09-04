@@ -212,22 +212,27 @@ footer .wrap{display:flex; flex-wrap:wrap; gap:12px; justify-content:space-betwe
           </figure>
           <div class="media-2">
             <figure>
-              <img src="invideo-crew.jpg" alt="Production crew panel: ten numbered pipeline stages with per-stage credit costs and model plan, beside the rendered 9:16 output video" loading="lazy">
-              <figcaption>Ten stages, priced before you run &mdash; and the cut that comes out</figcaption>
+              <img src="invideo-crew.jpg" alt="Production crew panel: ten numbered pipeline stages with per-stage credit costs and the model plan, beside the rendered 9:16 output video" loading="lazy">
+              <figcaption>Ten stages, priced before the run &mdash; and the cut that comes out</figcaption>
             </figure>
             <figure>
-              <img src="invideo-storyboard.jpg" alt="Storyboard view: six generated shots with per-shot continuity health dots, QC filters and the keyframe prompt for the selected shot" loading="lazy">
-              <figcaption>Storyboard with per-shot continuity health and the prompt behind each frame</figcaption>
+              <img src="invideo-consistency.jpg" alt="Storyboard of a documentary-realism run: thirteen shots holding the same photoreal character, with per-shot continuity health dots and the keyframe prompt for the selected shot" loading="lazy">
+              <figcaption>One locked character, held across thirteen shots &mdash; with the prompt behind each frame</figcaption>
             </figure>
           </div>
+          <figure>
+            <img src="invideo-range.jpg" alt="Three runs from the same pipeline: hand-drawn doodle in six shots, documentary photorealism in thirteen shots, and UGC phone-selfie realism in six shots" loading="lazy">
+            <figcaption>Same pipeline, three visual worlds &mdash; style is configuration, not a different product</figcaption>
+          </figure>
         </div>
 
         <ul class="did">
           <li><strong>Ten-stage pipeline you can see and stop.</strong> Script, Safety, Casting, Storyboard, Visuals, Animate, Voiceover, Music, Sound, Edit &amp; render &mdash; each stage re-runnable on its own, each able to pause for review before it spends anything.</li>
-          <li><strong>The bill before the run.</strong> Every stage carries a credit cost, and the panel shows estimated spend, typical range, current balance and balance after the run.</li>
+          <li><strong>The bill before the run.</strong> Every stage carries a credit cost, and the panel shows estimated spend, the typical range, the current balance and what the balance would be afterwards &mdash; including when that number goes negative.</li>
           <li><strong>Character consistency that is auditable.</strong> Recurring subjects are locked once and reused verbatim, with a seed lock, a consistency score across shots, and branch signatures showing exactly which routings each description was sent to.</li>
           <li><strong>Nothing regenerates silently.</strong> Editing a character sheet changes future generations only; the storyboard tracks per-shot revision drift, stale frames and image/motion QC.</li>
-          <li><strong>Model routing across providers</strong> &mdash; Claude for the reasoning stages, Gemini via the Agent Development Kit, fal.ai for image, video and speech &mdash; swappable per run.</li>
+          <li><strong>Style is configuration, not a rebuild.</strong> The same ten stages produce hand-drawn doodle, documentary photorealism or UGC phone-selfie footage &mdash; platform, length, language, style and consistency mode are settings on the run.</li>
+          <li><strong>Model routing across providers</strong> &mdash; Claude for the reasoning stages, Gemini via the Agent Development Kit, fal.ai and Pollinations for image, video and speech &mdash; swappable per run, with an opt-in paid fallback if the free provider is down.</li>
           <li>Verified by QuarkusTest and Testcontainers suites plus architecture-boundary and contract tests that fail the build, on every pipeline.</li>
         </ul>
         <p class="mono" style="margin-bottom:16px">Quarkus (Java 21, GraalVM-native ready) &middot; Vue 3 &middot; Vite &middot; TypeScript &middot; PostgreSQL + Flyway &middot; Google Cloud Storage &middot; ffmpeg</p>
