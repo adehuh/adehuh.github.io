@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Ade Rusmana — Senior Fullstack Developer &amp; AI Engineer</title>
-<meta name="description" content="Ade Rusmana — senior fullstack developer and AI engineer in Jakarta. 15+ years building enterprise software: multi-agent LLM pipelines, Quarkus microservices, Kubernetes and near-zero-RPO PostgreSQL.">
+<meta name="description" content="Ade Rusmana — senior fullstack developer and AI engineer in Jakarta. 15+ years building enterprise software: multi-agent LLM pipelines, microservice platforms and the infrastructure they run on.">
 <meta property="og:title" content="Ade Rusmana — Senior Fullstack Developer &amp; AI Engineer">
-<meta property="og:description" content="15+ years building enterprise software. Multi-agent LLM pipelines on Claude and Gemini, Quarkus microservices, multi-cloud Kubernetes.">
+<meta property="og:description" content="15+ years building enterprise software. Multi-agent LLM pipelines, microservice platforms and the multi-cloud infrastructure they run on.">
 <meta property="og:type" content="profile">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -170,7 +170,7 @@ footer .wrap{display:flex; flex-wrap:wrap; gap:12px; justify-content:space-betwe
     <h1>Ade Rusmana</h1>
     <p class="role"><b>Senior Fullstack Developer</b> &nbsp;&middot;&nbsp; <b>AI Engineer</b> &nbsp;&middot;&nbsp; Jakarta, Indonesia</p>
     <p class="lede">Hands-on across frontend, backend and database, with <strong>15+ years building enterprise software</strong> and the production judgment to own auth, billing, migrations, permissions and data integrity in real systems. At home in a messy, founder-built codebase: I take fast-moving products and turn them into something customers and operators can rely on.</p>
-    <p class="lede">From PostgreSQL schema and migrations, through Java&nbsp;21 / Quarkus and reactive Spring Boot services, to Vue&nbsp;3 on the web and native Android and Flutter on mobile &mdash; and the multi-cloud Kubernetes it all runs on. Recent work centres on <strong>multi-agent LLM systems</strong> on the Anthropic Claude and Google Gemini APIs.</p>
+    <p class="lede">From database schema and migrations, through the backend services, to the web and native mobile clients &mdash; and the multi-cloud infrastructure it all runs on. Recent work centres on <strong>multi-agent LLM systems</strong> on the Anthropic Claude and Google Gemini APIs.</p>
     <div class="cta-row">
       <a class="btn primary" href="#ai">See the AI work</a>
       <a class="btn" href="https://www.linkedin.com/in/ade-rusmana-24b1ba23/" target="_blank" rel="noopener">LinkedIn</a>
@@ -198,9 +198,9 @@ footer .wrap{display:flex; flex-wrap:wrap; gap:12px; justify-content:space-betwe
       <div class="feature-body">
         <div class="tagline">
           <span class="chip acc">Agent crew</span>
-          <span class="chip">Quarkus · Java 21</span>
-          <span class="chip">Claude + Gemini</span>
-          <span class="chip">fal.ai</span>
+          
+          
+          
         </div>
         <h3>invideo &mdash; AI Video Creation Platform</h3>
         <p>An idea, a script or a link goes in; a finished, publish-ready video comes out. A crew of Claude-powered agents &mdash; Director, Scriptwriter, Cinematographer, Casting, Character Designer, Colorist, Sound, Music, Brand Safety and QC &mdash; is assembled per project and runs the production end to end.</p>
@@ -232,10 +232,9 @@ footer .wrap{display:flex; flex-wrap:wrap; gap:12px; justify-content:space-betwe
           <li><strong>Character consistency that is auditable.</strong> Recurring subjects are locked once and reused verbatim, with a seed lock, a consistency score across shots, and branch signatures showing exactly which routings each description was sent to.</li>
           <li><strong>Nothing regenerates silently.</strong> Editing a character sheet changes future generations only; the storyboard tracks per-shot revision drift, stale frames and image/motion QC.</li>
           <li><strong>Style is configuration, not a rebuild.</strong> The same ten stages produce hand-drawn doodle, documentary photorealism or UGC phone-selfie footage &mdash; platform, length, language, style and consistency mode are settings on the run.</li>
-          <li><strong>Model routing across providers</strong> &mdash; Claude for the reasoning stages, Gemini via the Agent Development Kit, fal.ai and Pollinations for image, video and speech &mdash; swappable per run, with an opt-in paid fallback if the free provider is down.</li>
-          <li>Verified by QuarkusTest and Testcontainers suites plus architecture-boundary and contract tests that fail the build, on every pipeline.</li>
+          <li><strong>Model routing across providers</strong> &mdash; one family for the reasoning stages, others for image, video and speech &mdash; swappable per run, with an opt-in paid fallback if the free provider is down.</li>
+          <li>Verified by integration suites against real containerised dependencies, plus architecture-boundary and contract tests that fail the build, on every pipeline.</li>
         </ul>
-        <p class="mono" style="margin-bottom:16px">Quarkus (Java 21, GraalVM-native ready) &middot; Vue 3 &middot; Vite &middot; TypeScript &middot; PostgreSQL + Flyway &middot; Google Cloud Storage &middot; ffmpeg</p>
       </div>
     </article>
 
@@ -244,7 +243,6 @@ footer .wrap{display:flex; flex-wrap:wrap; gap:12px; justify-content:space-betwe
         <div class="tagline">
           <span class="chip">In production</span>
           <span class="chip acc">Multi-agent orchestration</span>
-          <span class="chip">Claude + Gemini</span>
           <span class="chip">9-stage pipeline</span>
         </div>
         <h3>CLIPPER &mdash; Automated Video Clipping Factory</h3>
@@ -293,7 +291,6 @@ footer .wrap{display:flex; flex-wrap:wrap; gap:12px; justify-content:space-betwe
           <li><strong>Nothing reaches a platform unreviewed.</strong> Publishing runs through a chain &mdash; CLASSIFY, MATCH, CLEAR, LOCALIZE, ROUTE, QUEUE &mdash; that stops at a gate before anything goes out, switchable per source between manual and automatic.</li>
           <li><strong>Cost attributed per stage</strong>, with a one-approve review queue between proposal and publish.</li>
         </ul>
-        <p class="mono" style="margin-bottom:16px">Claude Messages API &middot; tool use &middot; model routing &middot; whisper &middot; libass &middot; ffmpeg &middot; Vue 3 operator console</p>
       </div>
     </article>
 
@@ -301,15 +298,14 @@ footer .wrap{display:flex; flex-wrap:wrap; gap:12px; justify-content:space-betwe
 
 
       <article class="card">
-        <div class="tagline"><span class="chip acc">RAG</span><span class="chip">LangGraph4j</span></div>
+        <div class="tagline"><span class="chip acc">RAG</span><span class="chip">Intent routing</span></div>
         <h4>KlikJob AI Service Broker</h4>
-        <p>A Quarkus microservice answering freelance-marketplace queries in natural language. A LangGraph4j intent-routing graph dispatches each message to a dedicated node: service search, category retrieval, help centre, profile review, rating summary, dispute decision or plain chat.</p>
+        <p>A microservice answering freelance-marketplace queries in natural language. An intent-routing graph dispatches each message to a dedicated node: service search, category retrieval, help centre, profile review, rating summary, dispute decision or plain chat.</p>
         <ul class="did">
-          <li>Semantic search over a Qdrant vector database, kept in sync by PostgreSQL change-data-capture triggers.</li>
+          <li>Semantic search over a vector database, kept in sync by change-data-capture triggers on the primary store.</li>
           <li>Deterministic auction-to-listing matcher alongside the model, so matching stays explainable.</li>
-          <li>WebSocket streaming chat with token compaction; health, OpenAPI and Prometheus instrumentation.</li>
+          <li>WebSocket streaming chat with token compaction; health, OpenAPI and metrics instrumentation.</li>
         </ul>
-        <p class="tech">Quarkus · LangChain4j · LangGraph4j · Google Gemini + Agent Development Kit · Qdrant · PostgreSQL CDC</p>
       </article>
     </div>
   </section>
@@ -321,9 +317,9 @@ footer .wrap{display:flex; flex-wrap:wrap; gap:12px; justify-content:space-betwe
 
     <article class="feature" style="margin-bottom:22px">
       <div class="feature-body">
-        <div class="tagline"><span class="chip live">Live on Google Play</span><span class="chip">Flutter</span><span class="chip">Spring Boot</span><span class="chip">~15 services</span></div>
+        <div class="tagline"><span class="chip live">Live on Google Play</span><span class="chip">~15 services</span></div>
         <h3>klikjob.com &mdash; Job Marketplace</h3>
-        <p>An Indonesian freelancer marketplace: a reactive Spring Boot / JHipster&nbsp;8 microservices estate on GKE, with an OAuth2 API gateway and Consul discovery fronting ~15 services &mdash; user, registration, CMS, CRM, chat, workflow, financial, payment, e-mail and reporting. The platform's longest-running codebase, in continuous development since 2022.</p>
+        <p>An Indonesian freelancer marketplace: a microservices estate behind an OAuth2 API gateway with service discovery, fronting ~15 services &mdash; user, registration, CMS, CRM, chat, workflow, financial, payment, e-mail and reporting. The platform's longest-running codebase, in continuous development since 2022.</p>
 
         <div class="shots" id="klikjob-shots">
           <img loading="lazy" src="https://play-lh.googleusercontent.com/0ip9O3KLhMytLJ4Ik7nQIDKYFcISWAPqCHWVn1w8CerWVJtaKsy-4rLkpVug5OvKj9JXc5CcTrzMQ8nKrKW2iRQ=w392" alt="KlikJob: 90+ work categories">
@@ -335,11 +331,10 @@ footer .wrap{display:flex; flex-wrap:wrap; gap:12px; justify-content:space-betwe
         </div>
         <p class="shots-note">Screens from the published Google Play listing</p>
         <ul class="did">
-          <li>Flutter Android/iOS client on GetX over a clean data/domain/feature architecture: STOMP WebSocket chat, ObjectBox offline cache with background sync, Dio token-refresh interceptors.</li>
+          <li>Cross-platform Android/iOS client over a clean data/domain/feature architecture: real-time socket chat, an on-device offline cache with background sync, and transparent token-refresh interceptors.</li>
           <li>KTP OCR for KYC, wallet top-up and withdrawal, auctions and milestone tracking, Google Maps background location, verified deep links and forced update.</li>
-          <li>Verified by a Patrol end-to-end suite with GitLab CI static analysis and SonarQube.</li>
+          <li>Verified by an end-to-end device suite, with static analysis and quality gates in CI.</li>
         </ul>
-        <p class="mono" style="margin-bottom:16px">Spring Boot WebFlux &middot; JHipster 8 &middot; Keycloak &middot; Hazelcast &middot; Apache Pulsar &middot; PostgreSQL &middot; GraalVM native &middot; Flutter &middot; Cypress</p>
         <div class="links"><a class="btn primary" href="https://play.google.com/store/apps/details?id=com.klikjob.a" target="_blank" rel="noopener">View on Google Play</a></div>
       </div>
     </article>
@@ -349,62 +344,57 @@ footer .wrap{display:flex; flex-wrap:wrap; gap:12px; justify-content:space-betwe
 
 
       <article class="card">
-        <div class="tagline"><span class="chip">End-to-end encryption</span><span class="chip">Kotlin</span></div>
+        <div class="tagline"><span class="chip">End-to-end encryption</span></div>
         <h4>Kirim &mdash; Encrypted Messenger</h4>
-        <p>A WhatsApp-class messenger built end to end: a multi-module Kotlin client against a Quarkus native backend, with a WebSocket carrying protobuf frames generated from the same contract the backend compiles.</p>
+        <p>A WhatsApp-class messenger built end to end: a multi-module native mobile client against a natively-compiled backend, with a socket carrying binary frames generated from the same contract the backend compiles.</p>
         <ul class="did">
-          <li>End-to-end encryption on libsignal &mdash; identity and pre-key vaults, per-peer session stores, safety numbers, a separate media cipher, and the Curve25519 identity key sealed by the Android Keystore.</li>
-          <li>A nightly two-emulator GitHub Actions gate proves one message becomes one ciphertext per device.</li>
-          <li>Jetpack Compose + Material 3 over Hilt/KSP, Room as single source of truth; R8-minified and ktlint-gated.</li>
+          <li>End-to-end encryption on an audited protocol library &mdash; identity and pre-key vaults, per-peer session stores, safety numbers, a separate media cipher, and the identity key sealed in the platform keystore.</li>
+          <li>A nightly two-emulator CI gate proves one message becomes one ciphertext per device.</li>
+          <li>A declarative UI layer over compile-time dependency injection, with the local database as single source of truth; minified and lint-gated on every build.</li>
         </ul>
-        <p class="tech">Kotlin 2.2 · Jetpack Compose · libsignal · protobuf/WebSocket · Quarkus native · ScyllaDB · Redpanda · Ed25519</p>
       </article>
 
       <article class="card">
-        <div class="tagline"><span class="chip">Build-vs-buy win</span><span class="chip">Java 25</span></div>
+        <div class="tagline"><span class="chip">Build-vs-buy win</span></div>
         <h4>gumlet-app &mdash; Self-Hosted Media Delivery</h4>
-        <p>A Gumlet-compatible image and video delivery platform with a Vue 3 dashboard. Replaced a per-gigabyte media SaaS with owned compute and storage &mdash; removing vendor lock-in and per-asset billing as traffic grows.</p>
+        <p>A drop-in-compatible image and video delivery platform with its own operator dashboard. Replaced a per-gigabyte media SaaS with owned compute and storage &mdash; removing vendor lock-in and per-asset billing as traffic grows.</p>
         <ul class="did">
-          <li>40 on-the-fly image operations through a libvips engine; an ffmpeg transcode worker producing H.264 HLS/DASH ladders.</li>
-          <li>RTMP live ingest via SRS, AES-128 HLS encryption, signed and expiring URLs, per-source custom domains.</li>
+          <li>40 on-the-fly image operations through a native imaging engine; a transcode worker producing H.264 HLS/DASH ladders.</li>
+          <li>RTMP live ingest, AES-128 HLS encryption, signed and expiring URLs, per-source custom domains.</li>
           <li>One YAML operation registry drives backend validation, dashboard controls and the golden-image test matrix.</li>
         </ul>
-        <p class="tech">Quarkus (Java 25 / GraalVM) · Vue 3 · libvips · ffmpeg · SRS · multi-tenant usage metering</p>
       </article>
 
       <article class="card">
         <div class="tagline"><span class="chip">B2B commerce</span><span class="chip">Payments</span></div>
         <h4>lexica.id &mdash; B2B Interior-Materials Marketplace</h4>
-        <p>A Quarkus monorepo split into a GraalVM-native-clean core and a JVM-only worker (PDF/XLSX generation, push, e-mail, signed uploads) integrated through a PostgreSQL job table, with a Vue 3 / Vuetify 3 / Pinia storefront.</p>
+        <p>A monorepo split into a natively-compiled core and a heavier background worker (PDF/XLSX generation, push, e-mail, signed uploads), integrated through a database job table, behind a component-driven storefront.</p>
         <ul class="did">
-          <li>Catalog, inventory, store onboarding and KYC, orders and fulfilment, Xendit payments and wallet, vouchers, customer-tier pricing and flash sales.</li>
+          <li>Catalog, inventory, store onboarding and KYC, orders and fulfilment, payments and in-app wallet, vouchers, customer-tier pricing and flash sales.</li>
           <li>Self-contained RS256 JWT auth with route- and resource-level RBAC.</li>
-          <li>Shipped through GitLab CI with SonarQube gates and dependency scanning on every build.</li>
+          <li>Shipped through CI with quality gates and dependency scanning on every build.</li>
         </ul>
-        <p class="tech">Quarkus 3 · Vue 3 · Vuetify 3 · Pinia · PostgreSQL · Xendit · RS256 JWT</p>
       </article>
 
       <article class="card">
         <div class="tagline"><span class="chip">Enterprise ERP</span><span class="chip">Multi-tenant</span></div>
         <h4>Contractor Pro / Workpath &mdash; Construction ERP</h4>
-        <p>A Quarkus 3 and Vue 3 enterprise system for contractors, built around a definition-driven workflow and approval engine with role- and scope-based matrices.</p>
+        <p>An enterprise system for contractors, built around a definition-driven workflow and approval engine with role- and scope-based matrices.</p>
         <ul class="did">
           <li>Project milestones on a Gantt timeline; HR and attendance with a mobile flow; sales and accounts receivable.</li>
           <li>Unified notification pipeline, PDF/XLSX reporting, multi-tenant SaaS structure.</li>
-          <li>Deployed on Kubernetes with Playwright API and UI E2E suites in CI before each release.</li>
+          <li>Deployed on Kubernetes with API and UI end-to-end suites in CI before each release.</li>
         </ul>
-        <p class="tech">Quarkus 3 · Vue 3 · Kubernetes · Playwright · multi-tenant SaaS</p>
       </article>
 
       <article class="card">
-        <div class="tagline"><span class="chip acc">Open source</span><span class="chip">TypeScript</span></div>
+        <div class="tagline"><span class="chip acc">Open source</span></div>
         <h4>ECGO Ops Dashboard</h4>
         <p>Operations dashboard for an electric-scooter battery-swap network: cabinet inventory, swap transactions and branch-level performance analytics. Public repository &mdash; readable code, honest commit history.</p>
         <ul class="did">
           <li>Role-based access control with branch-scoped visibility; geofence check-in validation.</li>
-          <li>121 unit tests and 50 Cypress E2E tests; database-side aggregations, no N+1 queries.</li>
+          <li>121 unit tests and 50 end-to-end tests; database-side aggregations, no N+1 queries.</li>
         </ul>
-        <p class="tech">Vue 3 · Vite · Pinia · Express 5 · PostgreSQL 16 · Zod · Tailwind · Vitest · Cypress</p>
         <div class="links"><a class="btn sm" href="https://github.com/adehuh/ecgo-ops-dashboard" target="_blank" rel="noopener">View source</a></div>
       </article>
     </div>
@@ -417,14 +407,14 @@ footer .wrap{display:flex; flex-wrap:wrap; gap:12px; justify-content:space-betwe
     <p class="sec-intro">I don't hand the platform over at the edge of the codebase. I run what it sits on.</p>
     <article class="feature">
       <div class="feature-body">
-        <div class="tagline"><span class="chip">Kubernetes</span><span class="chip">GitOps</span><span class="chip">Application security</span><span class="chip">Observability</span></div>
+        <div class="tagline"><span class="chip">GitOps</span><span class="chip">Application security</span><span class="chip">Observability</span></div>
         <h3>DevOps &amp; Application Security Platform</h3>
         <ul class="did">
-          <li><strong>Multi-cloud Kubernetes</strong> across Alibaba Cloud ACK and Google GKE, namespace-per-service isolation, Istio mesh with Kiali topology and Zipkin tracing.</li>
-          <li><strong>Near-zero RPO:</strong> three-instance CloudNativePG clusters per service &mdash; WAL archived every five minutes, standby-sourced barman backups, PgBouncer read/write and read-only poolers, pod disruption budgets.</li>
-          <li><strong>GitOps delivery:</strong> each service is an Argo CD Application synced from the manifest repository with self-heal, prune and server-side apply.</li>
-          <li><strong>Security:</strong> Google Cloud Armor WAF with per-endpoint rate-based ban rules, default-deny NetworkPolicies, TLS and ingress hardening, secret and JWT signing-key management.</li>
-          <li><strong>Observability:</strong> Prometheus Operator with per-service ServiceMonitors, PrometheusRule alerting and Alertmanager, Grafana dashboards, centralised logging on Elasticsearch and Kibana.</li>
+          <li><strong>Multi-cloud Kubernetes</strong> across two providers, namespace-per-service isolation, a service mesh with topology and distributed tracing.</li>
+          <li><strong>Near-zero RPO:</strong> three-instance HA database clusters per service &mdash; write-ahead logs archived every five minutes, standby-sourced backups, read/write and read-only connection poolers, pod disruption budgets.</li>
+          <li><strong>GitOps delivery:</strong> each service syncs from a manifest repository with self-heal, prune and server-side apply.</li>
+          <li><strong>Security:</strong> a WAF with per-endpoint rate-based ban rules, default-deny network policies, TLS and ingress hardening, secret and signing-key management.</li>
+          <li><strong>Observability:</strong> per-service metric collection with rule-based alerting, dashboards, and centralised log search across the estate.</li>
         </ul>
       </div>
     </article>
