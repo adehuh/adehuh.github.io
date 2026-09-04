@@ -277,6 +277,10 @@ footer .wrap{display:flex; flex-wrap:wrap; gap:12px; justify-content:space-betwe
               <figcaption>Paste the real numbers back in; the scoring model refits against them</figcaption>
             </figure>
           </div>
+          <figure>
+            <img src="clipper-crew.jpg" alt="The crew roster: five roles — Strategist, Highlight Scout, Editor, Publicist and QC/Brand Safety — each with its own model picker (Opus, Sonnet, Haiku) and a plain-English brief" loading="lazy">
+            <figcaption>Each role gets its own model and a plain-English brief &mdash; and old runs keep their crew snapshot</figcaption>
+          </figure>
         </div>
 
         <ul class="did">
@@ -285,6 +289,8 @@ footer .wrap{display:flex; flex-wrap:wrap; gap:12px; justify-content:space-betwe
           <li><strong>It admits what it does not know.</strong> Loop scores 0/20 and is labelled &ldquo;not yet measured&rdquo;; the retention curve is labelled &ldquo;model, not a measurement&rdquo;; the dashboard states every figure is a query over existing tables, zero fabrication.</li>
           <li><strong>Nothing is destroyed.</strong> Every re-caption or restore creates a new take rather than overwriting &mdash; a decision recorded as an ADR and surfaced in the UI.</li>
           <li><strong>Reframe, caption and aspect are choices, not re-runs</strong> &mdash; subject-track / two-shot / center-crop, four caption presets, 9:16 / 1:1 / 16:9, each producing a fresh take.</li>
+          <li><strong>Per-role model routing, steered in plain English.</strong> Strategist, Highlight Scout, Editor, Publicist and QC each run on their own model &mdash; Opus where judgement is expensive, Haiku where it isn't &mdash; and each takes a written brief (&ldquo;keep hooks under six words&rdquo;) fed in as a directive rather than a code change. Old runs keep their crew snapshot, so changing a brief never rewrites history.</li>
+          <li><strong>Nothing reaches a platform unreviewed.</strong> Publishing runs through a chain &mdash; CLASSIFY, MATCH, CLEAR, LOCALIZE, ROUTE, QUEUE &mdash; that stops at a gate before anything goes out, switchable per source between manual and automatic.</li>
           <li><strong>Cost attributed per stage</strong>, with a one-approve review queue between proposal and publish.</li>
         </ul>
         <p class="mono" style="margin-bottom:16px">Claude Messages API &middot; tool use &middot; model routing &middot; whisper &middot; libass &middot; ffmpeg &middot; Vue 3 operator console</p>
