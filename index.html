@@ -224,10 +224,6 @@ footer .wrap{display:flex; flex-wrap:wrap; gap:12px; justify-content:space-betwe
             <img src="invideo-range.jpg" alt="Three runs from the same pipeline: hand-drawn doodle in six shots, documentary photorealism in thirteen shots, and UGC phone-selfie realism in six shots" loading="lazy">
             <figcaption>Same pipeline, three visual worlds &mdash; style is configuration, not a different product</figcaption>
           </figure>
-          <figure>
-            <img src="invideo-newsroom.jpg" alt="News studio thumbnail workspace: five generated thumbnail concepts for one story, each with a readability and hook-strength score, a click-through metric stated as not measured, and an AI-disclosure warning" loading="lazy">
-            <figcaption>News studio &mdash; five thumbnails per story, each scored, and honest about the number nobody has earned yet</figcaption>
-          </figure>
         </div>
 
         <ul class="did">
@@ -237,7 +233,6 @@ footer .wrap{display:flex; flex-wrap:wrap; gap:12px; justify-content:space-betwe
           <li><strong>Nothing regenerates silently.</strong> Editing a character sheet changes future generations only; the storyboard tracks per-shot revision drift, stale frames and image/motion QC.</li>
           <li><strong>Style is configuration, not a rebuild.</strong> The same ten stages produce hand-drawn doodle, documentary photorealism or UGC phone-selfie footage &mdash; platform, length, language, style and consistency mode are settings on the run.</li>
           <li><strong>Model routing across providers</strong> &mdash; one family for the reasoning stages, others for image, video and speech &mdash; swappable per run, with an opt-in paid fallback if the free provider is down.</li>
-          <li><strong>A news desk on the same crew.</strong> A story becomes a script, a presenter read, a cut and five competing thumbnails &mdash; each scored for readability and hook strength, with click-through left blank and labelled not measured until something has actually published, and a disclosure check that flags a thumbnail whose cut does not declare what it used.</li>
           <li>Verified by integration suites against real containerised dependencies, plus architecture-boundary and contract tests that fail the build, on every pipeline.</li>
         </ul>
       </div>
@@ -295,6 +290,30 @@ footer .wrap{display:flex; flex-wrap:wrap; gap:12px; justify-content:space-betwe
           <li><strong>Per-role model routing, steered in plain English.</strong> Strategist, Highlight Scout, Editor, Publicist and QC each run on their own model &mdash; Opus where judgement is expensive, Haiku where it isn't &mdash; and each takes a written brief (&ldquo;keep hooks under six words&rdquo;) fed in as a directive rather than a code change. Old runs keep their crew snapshot, so changing a brief never rewrites history.</li>
           <li><strong>Nothing reaches a platform unreviewed.</strong> Publishing runs through a chain &mdash; CLASSIFY, MATCH, CLEAR, LOCALIZE, ROUTE, QUEUE &mdash; that stops at a gate before anything goes out, switchable per source between manual and automatic.</li>
           <li><strong>Cost attributed per stage</strong>, with a one-approve review queue between proposal and publish.</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="feature">
+      <div class="feature-body">
+        <div class="tagline">
+          <span class="chip acc">Newsroom</span>
+          <span class="chip">In development</span>
+        </div>
+        <h3>News Studio &mdash; AI News Desk</h3>
+        <p>A story goes in; a presenter-read news video and the thumbnails that have to carry it come out. A separate product, built on the same rule as the rest of my work: every number on screen can be traced back to something, and the ones it has not earned stay blank.</p>
+
+        <div class="media">
+          <figure>
+            <img src="newsstudio-thumbnails.jpg" alt="Thumbnail studio for one news story: three of five competing thumbnail concepts side by side, each labelled with its editorial angle and scored for readability and hook strength, with the click-through metric stated as not measured and a disclosure warning under each" loading="lazy">
+            <figcaption>Five thumbnails per story, each scored &mdash; and the number nobody has earned yet left blank on purpose</figcaption>
+          </figure>
+        </div>
+
+        <ul class="did">
+          <li><strong>Five competing concepts, not one.</strong> Each is built to play a different editorial angle &mdash; authority, reaction, restraint &mdash; and scored for readability and hook strength, so the pick is made on evidence rather than taste.</li>
+          <li><strong>Unmeasured stays unmeasured.</strong> Click-through reads blank and says so plainly until something has actually published from the workspace. A metric with nothing behind it is worse than no metric.</li>
+          <li><strong>Disclosure is checked, not assumed.</strong> A thumbnail carrying generated imagery is flagged when the cut it belongs to does not declare it.</li>
         </ul>
       </div>
     </article>
